@@ -1,0 +1,47 @@
+*{padding:0px;margin: 0px;}
+
+.container{
+    width :auto ; margin:5px;
+    height :100%;
+}
+.logout-button{
+     float:right;
+    box-sizing: border-box;
+    background-color: rgb(59, 66, 88);
+    margin-top:5px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    color:white;
+    border-radius: 20px;
+    font-size: 20px;
+}
+#upperContent{
+    height: 80px;
+    padding : 1px;
+}
+#lowerContent{
+    height:500px;
+    
+}
+.detail{ 
+    width:75%;
+    float: left;
+}
+.logout{ width: 24%;
+    float: right; 
+}
+.list{ 
+    width: 24%;
+    float: left;
+    height: 115%; 
+    margin-right: 1px;
+    border: 1px solid rgb(59, 66, 88);
+    border-radius: 5px;
+}
+.content{ width: 74%; 
+    float: right;
+    height: 115%; 
+    border: 1px solid rgb(59, 66, 88);
+    border-radius: 5px;
+}

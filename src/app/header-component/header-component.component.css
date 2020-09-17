@@ -1,0 +1,10 @@
+.header{
+    text-align: center;
+    font-size: 30px;
+    
+    background-color: rgb(50, 58, 83);
+    color:white;
+    padding:10px  0;
+    border-bottom: 2px solid #eee;
+
+}

@@ -1,0 +1,100 @@
+<div class="list">
+    <div id="navbar">
+      <div class="dropdown">
+        <button class="dropbtn">Filter</button>
+        <div class="dropdown-content">
+          <a (click)="getAllUsers()">All</a>
+          <a (click)="getPendingUsers()">Pending</a>
+          <a (click)="getApprovedUsers()">Approved</a>
+          <a (click)="getRejectedUsers()">Rejected</a>
+        </div>
+      </div>
+     <!-- <ul>
+        <li><a >Pending</a></li>
+        <li><a (click)="getAllUsers()">All</a></li>
+        <li><a >Approved</a></li>
+        <li><a >Rejected</a></li>
+      </ul>
+      -->
+  </div>
+  <div id="list-div" >
+  
+    <table class="list-table" style="width: 100%;">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Image-Name</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor="let data of userData" [class.selected]="data === selectedUser" (click)="showSelectedUserImage(data.IMAGE_NAME)" (click)="showSelectedUserData(data.ID)" >
+          <td>{{data.ID}}</td>
+         <td>{{data.IMAGE_NAME}}</td> 
+         <td>{{data.REQUESTED_AMOUNT}}</td> 
+         
+          <td *ngIf="data.VERIFY_STATUS == 0">Pending</td>
+          <td *ngIf="data.VERIFY_STATUS == 1" style ="color: green;">Approved</td>
+          <td *ngIf="data.VERIFY_STATUS == 2" style="color: orangered;">Rejected</td>
+          
+        </tr>
+      </tbody>
+   
+  </table>
+  </div>
+  <div class="pagination">
+    <a href="">&laquo;</a>
+    <a  href="">1</a>
+    <a href="">2</a>
+    <a href="">3</a>
+    <a href="">&raquo;</a>
+  </div>
+  </div>
+
+
+  <div  class="content"  >
+    <div  class="bill-details">
+      <table *ngFor="let data of selecteduserData" style="font-size: 20px;">
+        <tr>
+          <td>ID: </td>
+          <td>{{data.ID}}</td>
+        </tr>
+        <tr>
+          <td>Image :</td>
+          <td>{{data.IMAGE_NAME}}</td>
+        </tr>
+        <tr>
+          <td> Reimbursment Amount :</td>
+          <td>{{data.REQUESTED_AMOUNT}}</td>
+        </tr>
+        <tr>
+          <td> Bill :</td>
+          <td></td>
+        </tr>
+      </table>
+      <div  *ngFor="let data of selecteduserData">
+        <div *ngIf="data.VERIFY_STATUS==0"class="response-btn">
+          <button class="approve-btn" (click)="approve(data.ID,1)">Approve</button>
+          <button class="reject-btn" (click)="reject(data.ID,2)">Reject</button>
+        </div>
+        <div *ngIf="data.VERIFY_STATUS==1"class="response-btn">
+          <button class="reject-btn" (click)="reject(data.ID,2)">Reject</button>
+        </div>
+        <div *ngIf="data.VERIFY_STATUS==2" class="response-btn">
+          <button class="approve-btn"  (click)="approve(data.ID,1)">Approve</button>
+        </div>
+      </div>
+    </div>
+    <div > 
+      <img src={{imgsrc}} style="width:500px;height:400px;">
+    </div>
+    
+       
+       
+      
+</div>
+     
+    
+  
+ 
