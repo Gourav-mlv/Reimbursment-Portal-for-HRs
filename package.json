@@ -1,6 +1,6 @@
 {
-  "name": "web-portal1",
-  "version": "0.0.0",
+  "name": "web-portal",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -50,11 +50,7 @@
   "main": "karma.conf.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ananyajoshi/web-portal.git"
+    "url": "git+https://github.com/Gourav-mlv/Reimbursment-Portal-for-HRs"
   },
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/ananyajoshi/web-portal/issues"
-  },
-  "homepage": "https://github.com/ananyajoshi/web-portal#readme"
+  "author": "Gourav Malviya"
 }
